@@ -4,8 +4,8 @@ const {generateSW} = require('workbox-build');
 
 generateSW({
 
-  swDest: 'app1/service-worker.js',
-  globDirectory: 'app1',
+  swDest: 'App1/service-worker.js',
+  globDirectory: 'App1',
   globPatterns: [
     '**/*.{html,css,js,gif,jpg,png,svg}'
   ],
