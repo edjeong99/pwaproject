@@ -13,11 +13,19 @@ function addInput() {
   //   ).value;
 
   var inputStr = document.getElementById('inputtest').value;
-  inputArr.push(new InputItem(inputStr));
-  //alert(inputArr[inputArr.length - 1].inputStr);
 
-  var node = document.createElement('span');
-  node.innerHTML = inputStr;
-  node.setAttribute('class', 'inputStrDisplay');
-  document.getElementById('divResult').appendChild(node);
+  spanMaker(inputStr);
+
+  inputArr.push(new InputItem(inputStr));
+
+  // save the inputArr in local storage
+  // convert array into string for local storage
+  localStorage.setItem('inputStr', JSON.stringify(inputArr));
 }
+
+const spanMaker = inputStr => {
+  const span = document.createElement('span');
+  span.textContent = inputStr;
+  span.setAttribute('class', 'inputStrDisplay');
+  document.getElementById('divResult').appendChild(span);
+};
