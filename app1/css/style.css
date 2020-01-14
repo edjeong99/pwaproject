@@ -7,3 +7,16 @@
   border: 1px solid #BBB;
 }
 
+.inputStrDisplay{
+  border: 1px solid black;
+  margin : 0 10px;
+  padding : 3px;
+}
+
+#divResult{
+  border: 1px solid black;
+  width : 300px;
+  margin-top : 20px;
+  padding : 10px;
+
+}
