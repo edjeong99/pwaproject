@@ -1,3 +1,5 @@
+//import localforage from 'localforage';
+
 var inputArr = [];
 
 function InputItem(inputStr) {
@@ -8,11 +10,7 @@ function InputItem(inputStr) {
 function addInput() {
   var inputStr = document.getElementById('inputtest').value;
 
-  inputArr.push(new InputItem(inputStr));
-
-  // save the inputArr in local storage
-  // convert array into string for local storage
-  localStorage.setItem('inputStr', JSON.stringify(inputArr));
+  dataManage(inputStr);
 
   displayInput2();
 }
@@ -34,4 +32,23 @@ function displayInput2() {
   for (let i = 0; i < inputArr.length; i++) {
     displayInput(inputArr[i].inputStr);
   }
+}
+
+function dataManage(inputStr) {
+  inputArr.push(new InputItem(inputStr));
+
+  // save the inputArr in local storage
+  // convert array into string for local storage
+  localStorage.setItem('inputStr', JSON.stringify(inputArr));
+
+  // save the inputArr in local forage
+
+  localforage
+    .setItem('inputStrForage', inputArr)
+    .then(function(value) {
+      console.log('localforage success');
+    })
+    .catch(function(err) {
+      console.log('localforage failed');
+    });
 }
