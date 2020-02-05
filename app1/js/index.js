@@ -43,12 +43,12 @@ function dataManage(inputStr) {
 
   // save the inputArr in local forage
 
-  localforage
-    .setItem('inputStrForage', inputArr)
-    .then(function(value) {
-      console.log('localforage success');
-    })
-    .catch(function(err) {
-      console.log('localforage failed');
-    });
+  // localforage
+  //   .setItem('inputStrForage', inputArr)
+  //   .then(function(value) {
+  //     console.log('localforage success');
+  //   })
+  //   .catch(function(err) {
+  //     console.log('localforage failed');
+  //   });
 }

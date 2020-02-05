@@ -33,7 +33,7 @@ self.__precacheManifest = [
   },
   {
     "url": "css/style.css",
-    "revision": "d407fb06c808e8acfe7bdfad2eb2ce6e"
+    "revision": "de0b9ff045efab3a5229642a906e5254"
   },
   {
     "url": "images/about.svg",
@@ -361,7 +361,11 @@ self.__precacheManifest = [
   },
   {
     "url": "index.html",
-    "revision": "459a9a1a71ef2581854fbe77dca81244"
+    "revision": "97ae96cb1235cfadc7c9cf27f27fb6f2"
+  },
+  {
+    "url": "js/index.js",
+    "revision": "2076e2f21ec00b030d0da09f451fff1d"
   },
   {
     "url": "styles/images/ui-icons_444444_256x240.png",
